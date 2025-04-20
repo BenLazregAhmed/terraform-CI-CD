@@ -9,10 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: correct location
-        run: cd /hello-world
-      - name: workspace
-        run: pwd  
+      - name: Change to web-app directory
+        working-directory: hello-world/web-app
+        run: |
+          echo "Now inside web-app"
+          ls -la 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
