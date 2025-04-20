@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: correct location
-        run: cd hello-world/web-app
+        run: cd /hello-world/web-app
       - name: workspace
         run: pwd  
       - name: Setup Terraform
